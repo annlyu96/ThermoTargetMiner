@@ -40,7 +40,7 @@ ui <- dashboardPage(
   
   dashboardSidebar(
     width = 250,
-    selectInput("dataset", label = h3("Select your proteomics data set"),
+    selectInput("dataset", label = h3("Select Proteomics Data Set"),
                 choices = list(
                   "A549 cell lysate",
                   "A549 intact cell",
@@ -118,7 +118,7 @@ ui <- dashboardPage(
                            column(2, plotlyOutput("bar_chart") %>% withSpinner())
                          ),
                          
-                         h3("GO Enrichment Analysis (based on genes exceeding the threshold in Transformed OPLS-DA)"),
+                         h3("GO Enrichment Analysis (based on proteins exceeding the threshold in Transformed OPLS-DA)"),
                          uiOutput("go_status"),
                          
                          fluidRow(
@@ -593,5 +593,6 @@ shinyApp(ui, server)
 
 #required files
 #renv::snapshot()
+
 
 
