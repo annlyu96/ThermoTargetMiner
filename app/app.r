@@ -1,6 +1,6 @@
 ## app.R
 
-setwd("I:/TTM/MyShinyApp/app")
+#setwd("I:/TTM/MyShinyApp/app")
 
 library(shiny)
 library(shinydashboard)
@@ -593,4 +593,5 @@ shinyApp(ui, server)
 
 #required files
 #renv::snapshot()
+
 
