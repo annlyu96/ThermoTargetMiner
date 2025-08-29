@@ -1,6 +1,7 @@
 # Base image
 FROM rocker/shiny:4.4.1
 
+ENV CXXFLAGS="-std=c++14"
 # General updates
 RUN apt-get update && \
     apt-get upgrade -y && \
