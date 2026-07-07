@@ -302,7 +302,7 @@ server <- function(input, output, session) {
     
     opls_joined <- opls_df %>% dplyr::left_join(trans_sub, by = "Gene names")
     
-    # 用阈值而不是 4.5
+    # Use chosen threshold instead of 4.5
     genes_over_thr <- opls_joined %>%
       dplyr::filter(!is.na(.data[[value_col]]), .data[[value_col]] > input$threshold) %>%
       dplyr::pull(`Gene names`)
